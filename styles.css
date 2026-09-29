@@ -1,0 +1,173 @@
+
+:root{
+  --cream:#f8f0e3;
+  --paper:#fbf5eb;
+  --green:#174f3f;
+  --green-2:#2c715a;
+  --text:#193f35;
+  --muted:#66766e;
+  --line:#d8d1c4;
+  --white:#fffdf8;
+  --radius:4px;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:#203c34;
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.55;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font:inherit}
+.container{width:min(var(--max),calc(100% - 64px));margin:auto}
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(251,245,235,.96);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(8px)
+}
+.nav{
+  min-height:72px;display:flex;align-items:center;gap:36px
+}
+.logo{
+  font-family:"Arial Narrow",Arial,sans-serif;
+  letter-spacing:.04em;font-size:22px;color:#2d704f;
+  white-space:nowrap
+}
+.nav-links{display:flex;gap:30px;align-items:center;margin:auto}
+.nav-links a{font-size:14px;color:#20372f}
+.nav-links a.active,.nav-links a:hover{color:var(--green)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:42px;padding:0 22px;border:1px solid var(--green);
+  border-radius:5px;background:var(--green);color:white;font-size:13px;
+  cursor:pointer;transition:.2s
+}
+.btn:hover{transform:translateY(-1px);background:#103e31}
+.btn.light{background:var(--white);color:var(--green)}
+.btn.outline{background:transparent;color:var(--green)}
+.menu-btn{display:none;border:0;background:none;font-size:25px;color:var(--green)}
+.hand{
+  font-family:"Segoe Print","Bradley Hand","Comic Sans MS",cursive;
+  font-weight:500;letter-spacing:-.04em;color:var(--green)
+}
+.kicker{font-size:12px;color:#668073;margin-bottom:10px}
+h1,h2,h3,p{margin-top:0}
+h1{font-size:clamp(42px,5vw,74px);line-height:1.02;font-weight:400}
+h2{font-size:clamp(34px,4vw,52px);line-height:1.05;font-weight:400}
+h3{font-size:22px;font-weight:500}
+.lead{font-size:15px;color:#34463f;max-width:520px}
+.hero{min-height:760px;display:grid;grid-template-columns:1fr 1.3fr;align-items:center;gap:35px}
+.hero-copy{padding-top:30px}
+.hero-art{align-self:stretch;display:flex;align-items:center;justify-content:flex-end}
+.hero-art img{width:100%;height:auto;object-fit:contain}
+.eyebrow{font-size:12px;color:#6a7d73;margin-bottom:8px}
+.section{padding:110px 0}
+.center{text-align:center}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.card{
+  background:#fbf4e9;border:1px solid #e0d6c7;border-radius:4px;
+  padding:18px;min-height:330px;display:flex;flex-direction:column
+}
+.card-img{height:220px;object-fit:contain;width:100%}
+.card h3{margin:14px 0 7px;text-align:center;font-family:"Segoe Print","Bradley Hand",cursive;color:var(--green)}
+.card p{font-size:13px;text-align:center;color:#66736d;margin:0 auto;max-width:260px}
+.card .btn{margin:auto auto 0;font-size:11px;min-height:34px;padding:0 16px}
+.principles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+.principle{border:1px solid #e1d8ca;background:#fbf4e9;min-height:190px;padding:28px 20px;text-align:center}
+.principle.featured{background:var(--green);color:#fff}
+.principle .icon{font-size:28px;margin-bottom:20px}
+.principle h3{font-size:16px;margin-bottom:8px}
+.principle p{font-size:12px;margin:0;color:inherit;opacity:.82}
+.dual{
+  background:var(--green);color:#fff;padding:100px 0 120px;
+  border-radius:0;position:relative;overflow:hidden
+}
+.dual:after{
+  content:"";position:absolute;bottom:-55px;left:-2%;width:104%;height:100px;
+  background:var(--paper);border-radius:50% 50% 0 0/70% 70% 0 0
+}
+.dual h2,.dual .kicker{color:#fff}
+.dual-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:38px}
+.dual-card{background:var(--paper);color:var(--text);padding:20px;border-radius:4px}
+.dual-card img{height:280px;width:100%;object-fit:contain}
+.dual-card h3{font-family:"Segoe Print","Bradley Hand",cursive;color:var(--green);margin:12px 0 5px}
+.dual-card p{font-size:13px;margin:0;color:#60716a}
+.process{max-width:900px;margin:45px auto 0}
+.step{display:grid;grid-template-columns:190px 50px 1fr;align-items:center;min-height:80px;border-bottom:1px solid #ddd3c5}
+.step:last-child{border-bottom:0}
+.step-title{font-family:"Segoe Print","Bradley Hand",cursive;color:var(--green);font-size:20px}
+.step-num{width:32px;height:32px;border:1px solid #b9c2bc;border-radius:50%;display:grid;place-items:center;font-size:11px;color:var(--green)}
+.step p{margin:0;font-size:13px;color:#68776f}
+.quote{padding:80px 20px;text-align:center}
+.quote p{font-family:"Segoe Print","Bradley Hand",cursive;font-size:28px;color:var(--green);max-width:680px;margin:auto}
+.cta{
+  background-image:linear-gradient(rgba(20,79,63,.15),rgba(20,79,63,.15)),url("assets/cta-pattern.jpeg");
+  background-size:cover;background-position:center;
+  min-height:390px;display:grid;place-items:center;text-align:center;color:#fff;
+  margin:0 auto 100px;border-radius:4px;padding:50px
+}
+.cta h2{color:#fff;font-size:44px}
+.cta p{max-width:460px;margin:0 auto 22px}
+.footer{border-top:1px solid var(--line);padding:55px 0 70px}
+.footer-grid{display:grid;grid-template-columns:230px 150px 200px 1fr;gap:40px}
+.footer-brand .logo{font-size:25px}
+.footer h4{margin:0 0 12px;color:var(--green)}
+.footer a,.footer p{display:block;font-size:13px;color:#687770;margin:5px 0}
+.page-hero{padding:90px 0 50px}
+.about-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:70px;align-items:center}
+.about-grid + .about-grid{margin-top:120px}
+.about-grid img{width:100%;object-fit:contain;max-height:500px}
+.bullets{padding-left:18px;font-size:13px}
+.pricing-head{text-align:center;max-width:800px;margin:80px auto 40px}
+.toggle{display:inline-flex;border:1px solid var(--green);border-radius:4px;overflow:hidden;margin:20px 0}
+.toggle button{border:0;background:transparent;color:var(--green);padding:9px 22px;cursor:pointer}
+.toggle button.active{background:var(--green);color:white}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:100px}
+.price-card{border:1px solid #ded5c7;background:#fbf4e9;padding:34px 28px;min-height:390px;display:flex;flex-direction:column}
+.price-card h3{font-family:"Segoe Print","Bradley Hand",cursive;color:var(--green);font-size:26px}
+.price{font-size:27px;color:var(--green);margin:4px 0 22px}
+.price small{font-size:13px;color:#718078}
+.price-card p{font-size:13px;color:#68766f}
+.price-card .btn{margin-top:auto}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start;padding:80px 0 110px}
+.contact-copy h1{font-size:56px}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-size:12px;color:#66766e}
+.field input,.field textarea,.field select{
+  background:transparent;border:1px solid #cfc6b8;border-radius:3px;
+  padding:12px 13px;color:var(--text);outline:none
+}
+.field textarea{min-height:150px;resize:vertical}
+.form .btn{justify-self:start}
+.note{font-size:12px;color:#758179}
+@media (max-width:850px){
+  .container{width:min(var(--max),calc(100% - 36px))}
+  .nav-links{
+    display:none;position:absolute;top:72px;left:0;right:0;
+    background:var(--paper);padding:20px;flex-direction:column;gap:16px;
+    border-bottom:1px solid var(--line)
+  }
+  .nav-links.open{display:flex}
+  .nav>.btn{display:none}.menu-btn{display:block;margin-left:auto}
+  .hero{grid-template-columns:1fr;min-height:auto;padding:70px 0}
+  .hero-art{order:-1}.hero-art img{max-height:390px}
+  .services-grid,.principles,.dual-grid,.pricing-grid{grid-template-columns:1fr}
+  .card{min-height:0}.card-img{height:210px}
+  .section{padding:75px 0}
+  .step{grid-template-columns:1fr 45px 1.5fr}
+  .footer-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:35px}
+  .about-grid + .about-grid{margin-top:70px}
+  .contact-copy h1{font-size:45px}
+}
+@media (max-width:520px){
+  h1{font-size:42px}.quote p{font-size:22px}
+  .form{grid-template-columns:1fr}.field.full{grid-column:auto}
+  .cta{margin-bottom:65px;min-height:330px}
+}
